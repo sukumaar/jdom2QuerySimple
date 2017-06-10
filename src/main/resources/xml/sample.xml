@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<company xmlns="http://www.justAnotherSammpleNamespace.com">
+	<staff>
+		<personalInfo>
+			<name>
+				<firstname id="001" code="qwerty1">elon</firstname>
+				<lastname>musk</lastname>
+			</name>
+			<phone>11111111</phone>
+			<phone>22222222</phone>
+		</personalInfo>
+		<company>tesla</company>
+		<salary>100000</salary>
+		<isGood>yes</isGood>
+	</staff>
+	<staff>
+		<personalInfo>
+			<name>
+				<firstname id="002" code="qwerty2">mark</firstname>
+				<lastname>zukerberg</lastname>
+			</name>
+			<phone>33333333</phone>
+			<phone>44444444</phone>
+		</personalInfo>
+		<company>facebook</company>
+		<salary>100000</salary>
+	</staff>
+</company>
+<!-- This Example is inspired from example at https://www.mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/ -->
+
+<!-- In this example xml ,data/ elements are not comply with namespace i.e. 
+	xmlns ,because there is no such namespace as http://www.justAnotherSammpleNamespace.com 
+	I typed it wrong purposly My Observation: You can not query xml through XPath 
+	when your xml is not comply with namespace -->
+
+<!-- problem reference: https://stackoverflow.com/questions/5239685/xml-namespace-breaking-my-xpath 
+	https://stackoverflow.com/questions/10981312/xml-element-has-namespace-my-xpath-does-not-work -->

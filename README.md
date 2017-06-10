@@ -60,26 +60,35 @@ This xml is aligned with problem which we can solve with this library
 
 
 ```java
-import java.io.File;
-import java.util.List;
-import org.jdom2.Element;
-import com.sukumaar.jdom2.SimpleQuery.SimpleRead;
+SimpleRead obj = new SimpleRead();
+File xmlFile = new File("src/main/resources/xml/sample.xml");
+String query1 = "company.staff.personalInfo.name.firstname";
+List<Element> receiveData1 = obj.getData(xmlFile, query1);
+System.out.println(receiveData1.size());
+System.out.println(receiveData1);
 
-        SimpleRead obj = new SimpleRead();
-		File xmlFile = new File("src/main/resources/xml/sample.xml");
-		String query1 = "company.staff.personalInfo.name.firstname";
-		List<Element> receiveData1 = obj.getData(xmlFile, query1);
-		System.out.println(receiveData1.size());
-		System.out.println(receiveData1);
-
-		String query2 = "company.staff.personalInfo.phone";
-		List<Element> receiveData2 = obj.getData(xmlFile, query2);
-		System.out.println(receiveData2.size());
-		//iterating over received data
-		receiveData2.forEach(x -> {
-			System.out.println(x);
-		});
+String query2 = "company.staff.personalInfo.phone";
+List<Element> receiveData2 = obj.getData(xmlFile, query2);
+System.out.println(receiveData2.size());
+//iterating over received data
+receiveData2.forEach(x -> {
+	System.out.println(x);
+});
 ```
+### License
+Apache 2.0
+
+
+yess read it right , open and free
+
+
+### Thanks To:
+http://www.vavr.io
+https://www.mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/
+http://dillinger.io
+
+
 [Xml Namespace breaking my xpath!]: <https://stackoverflow.com/questions/5239685/xml-namespace-breaking-my-xpath>
 [XML element has namespace, my XPATH does not work
 ]:<https://stackoverflow.com/questions/10981312/xml-element-has-namespace-my-xpath-does-not-work>
+

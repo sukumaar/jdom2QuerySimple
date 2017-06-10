@@ -60,6 +60,11 @@ This xml is aligned with problem which we can solve with this library
 
 
 ```java
+import java.io.File;
+import java.util.List;
+import org.jdom2.Element;
+import com.sukumaar.jdom2.SimpleQuery.SimpleRead;
+
 SimpleRead obj = new SimpleRead();
 File xmlFile = new File("src/main/resources/xml/sample.xml");
 String query1 = "company.staff.personalInfo.name.firstname";
@@ -84,7 +89,9 @@ yess read it right , open and free
 
 ### Thanks To:
 http://www.vavr.io
+
 https://www.mkyong.com/java/how-to-read-xml-file-in-java-jdom-example/
+
 http://dillinger.io
 
 
